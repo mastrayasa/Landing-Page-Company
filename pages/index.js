@@ -1,6 +1,6 @@
 import React,{  useEffect,useState } from "react"
 import { useRouter } from 'next/router'
-
+import Head from 'next/head'  
 import { ReactNode } from 'react';
 import {
   Box,
@@ -27,6 +27,9 @@ import SimpleThreeColumns from '../components/featured'
 export default function Home(props) {
     return (
         <Box>
+            <Head>
+                <title>Home</title>
+            </Head>
             <WithSubnavigation />
             <Carousel />
             <CallToActionWithAnnotation />

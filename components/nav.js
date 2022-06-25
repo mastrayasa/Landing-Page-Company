@@ -21,7 +21,7 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-  
+  import NextLink from 'next/link'
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
   
@@ -68,26 +68,28 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
+                <NextLink href={'login'}>
             <Button
-              as={'a'}
+              as={"a"}
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
-              href={'#'}>
+              href={'/login'}>
               Sign In
-            </Button>
-            <Button
+            </Button></NextLink>
+            <NextLink href={'login'}>
+            <Button  as={"a"}
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
               bg={'pink.400'}
-              href={'#'}
+              href={'/register'}
               _hover={{
                 bg: 'pink.300',
               }}>
               Sign Up
-            </Button>
+            </Button></NextLink>
           </Stack>
         </Flex>
   
