@@ -1,29 +1,14 @@
-import React,{  useEffect,useState } from "react"
-import { useRouter } from 'next/router'
+import React  from "react"
 import Head from 'next/head'  
-import { ReactNode } from 'react';
-import {
-  Box,
-  Stack,
-  HStack,
-  Heading,
-  Text,
-  VStack,
-  useColorModeValue,
-  List,
-  ListItem,
-  ListIcon,
-  Button,
-} from '@chakra-ui/react';
-import { FaCheckCircle } from 'react-icons/fa';
-import CallToActionWithAnnotation from '../components/cta'
-import SplitWithImage from '../components/split'
-import WithSubnavigation from '../components/nav'
+import { Box } from '@chakra-ui/react'
+import CallToAction from '../components/call-to-action' 
+import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Pricing from '../components/pricing'
 import Carousel from '../components/carousel'
-import PartBlog from '../components/part-blog' 
-import SimpleThreeColumns from '../components/featured'
+import PartBlog from '../components/part-blog'  
+import Features from '../components/features'
+import FeatureImage from "../components/feature-image"
 import Testimonials from '../components/testimonials'
 export default function Home(props) {
     return (
@@ -31,28 +16,29 @@ export default function Home(props) {
             <Head>
                 <title>Home</title>
             </Head>
-            <WithSubnavigation />
+
+            <Navbar />
+
             <Carousel />
-            <CallToActionWithAnnotation />
-            <Box bg={'yellow.50'} py={10}>
-                <SplitWithImage />
+
+            <CallToAction />
+
+            <Box bg={'yellow.50'} py={10} borderY='1px' borderColor='gray.100'>
+                <FeatureImage />
             </Box> 
 
-            <Box py={10}>
+            <Box py={10} borderBottom='1px' borderColor='gray.100'>
                 <Pricing />
             </Box> 
 
-           
-
-            <Box py={0}>
+            <Box py={0} borderBottom='1px' borderColor='gray.100'>
                 <PartBlog /> 
             </Box>
 
             <Testimonials />
            
-           <SimpleThreeColumns />
+            <Features />
 
-            
             <Footer />
         </Box>
       );

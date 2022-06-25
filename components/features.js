@@ -24,13 +24,13 @@ const Feature = ({ title, text, icon } ) => {
   );
 };
 
-export default function SimpleThreeColumns() {
+export default function Features() {
   return (
     <Box p={4}> 
         <Container as={Stack} maxW={'6xl'} py={20}>
 
         <Stack mb={20} spacing={0} align={'center'}>
-          <Heading>Featured Of We Services</Heading>
+          <Heading>Features of our Services</Heading>
           <Text>We have been working with clients around the world</Text>
         </Stack>
 

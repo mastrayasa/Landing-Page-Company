@@ -11,7 +11,7 @@ import {
   createIcon,
 } from '@chakra-ui/react';
 
-export default function CallToActionWithAnnotation() {
+export default function CallToAction() {
   return (
     <>
       <Head>
@@ -32,7 +32,7 @@ export default function CallToActionWithAnnotation() {
             fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
             lineHeight={'110%'}>
             Make money from <br />
-            <Text as={'span'} color={'green.400'}>
+            <Text as={'span'} color={'blue.400'}>
               your audience
             </Text>
           </Heading>
@@ -48,12 +48,12 @@ export default function CallToActionWithAnnotation() {
             alignSelf={'center'}
             position={'relative'}>
             <Button
-              colorScheme={'green'}
-              bg={'green.400'}
+              colorScheme={'blue'}
+              bg={'blue.400'}
               rounded={'full'}
               px={6}
               _hover={{
-                bg: 'green.500',
+                bg: 'blue.500',
               }}>
               Get Started
             </Button>

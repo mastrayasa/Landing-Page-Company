@@ -14,6 +14,7 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
+    Container,
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -22,16 +23,18 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   import NextLink from 'next/link'
-  export default function WithSubnavigation() {
+  import LogoApplication from './logo-application';
+  export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
       <Box>
+        <Container maxW={'6xl'}>
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
-          py={{ base: 2 }}
+          py={{ base: 4 }}
           px={{ base: 4 }}
           borderBottom={1}
           borderStyle={'solid'}
@@ -55,7 +58,7 @@ import {
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
               color={useColorModeValue('gray.800', 'white')}>
-              Logo
+              <LogoApplication />
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -83,10 +86,10 @@ import {
               fontSize={'sm'}
               fontWeight={600}
               color={'white'}
-              bg={'pink.400'}
+              bg={'blue.400'}
               href={'/register'}
               _hover={{
-                bg: 'pink.300',
+                bg: 'blue.300',
               }}>
               Sign Up
             </Button></NextLink>
@@ -96,6 +99,7 @@ import {
         <Collapse in={isOpen} animateOpacity>
           <MobileNav />
         </Collapse>
+        </Container>
       </Box>
     );
   }
@@ -114,8 +118,8 @@ import {
                 <Link
                   p={2}
                   href={navItem.href ?? '#'}
-                  fontSize={'sm'}
-                  fontWeight={500}
+                  fontSize={'md'}
+                  fontWeight={400}
                   color={linkColor}
                   _hover={{
                     textDecoration: 'none',
@@ -244,45 +248,66 @@ import {
     );
   };
   
- 
-  
   const NAV_ITEMS = [
     {
-      label: 'Inspiration',
+        label: 'Partner',
+        href: '#',
+    },
+    {
+      label: 'Project',
       children: [
         {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
+          label: 'App Lorem',
+          subLabel: 'Lorem ipsum dolor sit amet, consectetur',
           href: '#',
         },
         {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
-          href: '#',
+            label: 'Website Lorem',
+            subLabel: 'Lorem ipsum dolor sit amet, consectetur',
+            href: '#',
+        },
+        {
+            label: 'Server &amp; Network Lorem',
+            subLabel: 'Lorem ipsum dolor sit amet, consectetur',
+            href: '#',
         },
       ],
     },
     {
-      label: 'Find Work',
+      label: 'Product',
       children: [
         {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
+          label: 'Super App',
+          subLabel: 'Lorem ipsum dolor sit amet, consectetur',
           href: '#',
         },
         {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
+            label: 'Cloud Hosting',
+            subLabel: 'Lorem ipsum dolor sit amet, consectetur',
+            href: '#',
+        },
+        {
+            label: 'VPS',
+            subLabel: 'Lorem ipsum dolor sit amet, consectetur',
+            href: '#',
+        },
+        {
+            label: 'SSL',
+            subLabel: 'Lorem ipsum dolor sit amet, consectetur',
+            href: '#',
         },
       ],
     },
     {
-      label: 'Learn Design',
-      href: '#',
+        label: 'Blog',
+        href: '#',
     },
     {
-      label: 'Hire Designers',
+        label: 'Help',
+        href: '#',
+    },
+    {
+      label: 'About',
       href: '#',
     },
   ];

@@ -13,7 +13,8 @@ import {
     Image,
   } from '@chakra-ui/react';
   import Head from 'next/head'  
-  import SocialMediaBtn from '../components/btn-social-meida'
+  import LinkNext from 'next/link'
+  import SocialMediaButton from '../components/social-media-button'
   export default function SplitScreen() {
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
@@ -47,7 +48,15 @@ import {
                     <Text color={'gray.400'}>Or</Text>
                 </Center>
 
-              <SocialMediaBtn />
+              <SocialMediaButton />
+
+              <Stack
+                direction={{ base: 'column', sm: 'row' }}
+                align={'start'}
+                justify={'space-between'}>
+                
+                <Link as={LinkNext} href={'/register'} color={'blue.500'}>Have't account ?</Link>
+              </Stack>
             </Stack>
           </Stack>
         </Flex>
