@@ -4,6 +4,8 @@ import {
     Flex,
     FormControl,
     FormLabel,
+    Center,
+    Text,
     Heading,
     Input,
     Link,
@@ -11,6 +13,7 @@ import {
     Image,
   } from '@chakra-ui/react';
   import Head from 'next/head'  
+  import SocialMediaBtn from '../components/btn-social-meida'
   export default function SplitScreen() {
     return (
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
@@ -39,6 +42,12 @@ import {
               <Button colorScheme={'blue'} variant={'solid'}>
                 Sign in
               </Button>
+
+                <Center>
+                    <Text color={'gray.400'}>Or</Text>
+                </Center>
+
+              <SocialMediaBtn />
             </Stack>
           </Stack>
         </Flex>

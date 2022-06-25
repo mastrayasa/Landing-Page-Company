@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { Box, SimpleGrid, Icon, Text, Stack, Flex , Container} from '@chakra-ui/react';
+import { Box, SimpleGrid, Icon, Text, Stack, Flex , Container,Heading} from '@chakra-ui/react';
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
 
  
@@ -28,6 +28,12 @@ export default function SimpleThreeColumns() {
   return (
     <Box p={4}> 
         <Container as={Stack} maxW={'6xl'} py={20}>
+
+        <Stack mb={20} spacing={0} align={'center'}>
+          <Heading>Featured Of We Services</Heading>
+          <Text>We have been working with clients around the world</Text>
+        </Stack>
+
       <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
         <Feature
           icon={<Icon as={FcAssistant} w={10} h={10} />}

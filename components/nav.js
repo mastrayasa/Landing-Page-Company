@@ -68,7 +68,7 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-                <NextLink href={'login'}>
+                <NextLink href={'/login'}>
             <Button
               as={"a"}
               fontSize={'sm'}
@@ -77,7 +77,7 @@ import {
               href={'/login'}>
               Sign In
             </Button></NextLink>
-            <NextLink href={'login'}>
+            <NextLink href={'/register'}>
             <Button  as={"a"}
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}

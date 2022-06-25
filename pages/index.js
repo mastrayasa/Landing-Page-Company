@@ -24,6 +24,7 @@ import Pricing from '../components/pricing'
 import Carousel from '../components/carousel'
 import PartBlog from '../components/part-blog' 
 import SimpleThreeColumns from '../components/featured'
+import Testimonials from '../components/testimonials'
 export default function Home(props) {
     return (
         <Box>
@@ -41,9 +42,13 @@ export default function Home(props) {
                 <Pricing />
             </Box> 
 
+           
+
             <Box py={0}>
                 <PartBlog /> 
             </Box>
+
+            <Testimonials />
            
            <SimpleThreeColumns />
 
